@@ -1,7 +1,7 @@
 {
-  "name": "@we-mobius/mobius-utils",
-  "version": "0.3.3",
-  "description": "Utils lib that basically follows FP flavor.",
+  "name": "@we-mobius/lib-template",
+  "version": "0.1.0",
+  "description": "Mobius flavor lib template project.",
   "type": "module",
   "main": "./src/main.js",
   "exports": {
@@ -25,10 +25,7 @@
   "module": "./src/main.js",
   "keywords": [
     "mobius",
-    "utils",
-    "functional",
-    "stream",
-    "atom"
+    "library"
   ],
   "directories": {
     "doc": "./docs",
@@ -49,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/we-mobius/mobius-utils.git"
+    "url": "git+https://github.com/we-mobius/lib-template.git"
   },
   "author": {
     "name": "kongxiangyan",
@@ -58,9 +55,9 @@
   },
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/we-mobius/mobius-utils/issues"
+    "url": "https://github.com/we-mobius/lib-template/issues"
   },
-  "homepage": "https://github.com/we-mobius/mobius-utils#readme",
+  "homepage": "https://github.com/we-mobius/lib-template#readme",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/eslint-parser": "^7.11.5",
@@ -102,7 +99,7 @@
       "config": ".cz-config.js"
     }
   },
-  "jsdelivr": "./release/mobius-utils.umd.js",
+  "jsdelivr": "./release/main.umd.js",
   "files": [
     "/release/*",
     "/dist/*",
@@ -116,8 +113,5 @@
     "registry": "https://registry.npmjs.org",
     "access": "public"
   },
-  "sideEffects": false,
-  "dependencies": {
-    "axios": "^0.21.0"
-  }
+  "sideEffects": false
 }

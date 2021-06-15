@@ -1,3 +1,3 @@
-import * as MobiusUtils from './es/index.js'
+import * as MobiusLib from './es/index.js'
 
-console.error(MobiusUtils)
+console.error(MobiusLib)
