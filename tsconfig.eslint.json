@@ -3,7 +3,6 @@
   "extends": "./tsconfig.json",
   "include": [
     "src/**/*.ts",
-    "test/**/*.ts",
-    "typings/**/*.ts"
+    "tests/**/*.ts"
   ]
 }

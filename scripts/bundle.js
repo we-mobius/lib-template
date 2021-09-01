@@ -28,7 +28,7 @@ const collectFiles = (rootPath, results = []) => {
   files.forEach(item => {
     const filepath = path.resolve(rootPath, item)
     if (fs.statSync(filepath).isDirectory()) {
-      results.push(...[collectFiles(filepath)])
+      results.push(...collectFiles(filepath))
     } else {
       results.push(filepath)
     }
@@ -117,7 +117,13 @@ const pack = () => {
         }
 
         if (stats.hasWarnings()) {
-          console.warn(info.warnings)
+          const warnings = info.warnings.filter(info => {
+            const { message } = info
+            return !message.startsWith('asset size limit:') && !message.startsWith('webpack performance recommendations:')
+          })
+          if (warnings.length > 0) {
+            console.warn(warnings)
+          }
         }
 
         resolve()

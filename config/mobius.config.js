@@ -1,4 +1,4 @@
-const PUBLIC_PATH = './' // '/'
+const PUBLIC_PATH = '/' // '/'
 // https://fonts.googleapis.com/
 //  -> https://fonts.googleapis.cnpmjs.org/
 //  -> https://fonts.dogedoge.com/
@@ -88,7 +88,7 @@ const commonTemplate = {
               <div class="svg-loading" style="width: 45px; height: 45px;"></div>
             </p>
             <p>
-              Mobius Template Project!
+              Mobius Lib Project!
             </p>
           </div>
         </div>

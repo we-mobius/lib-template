@@ -1,10 +1,11 @@
 
 import { rootResolvePath } from '../scripts/utils.js'
+import { getMobiusConfig } from './mobius.config.js'
 
 export const getCommonConfig = () => ({
   output: {
     filename: '[name].js',
-    publicPath: './'
+    publicPath: getMobiusConfig().publicPath
   },
   module: {
     rules: []
@@ -18,7 +19,7 @@ export const getCommonConfig = () => ({
       CJS: rootResolvePath('src/cjs/'),
       CJS$: rootResolvePath('src/cjs/index.cjs'),
       TS: rootResolvePath('src/ts/'),
-      TS$: rootResolvePath('src/es/index.ts'),
+      TS$: rootResolvePath('src/ts/index.ts'),
       Statics: rootResolvePath('src/statics/'),
       Images: rootResolvePath('src/statics/images/'),
       Styles: rootResolvePath('src/statics/styles/')
