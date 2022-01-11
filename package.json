@@ -1,7 +1,7 @@
 {
-  "name": "@we-mobius/lib-template",
+  "name": "@we-mobius/library-template",
   "version": "0.1.0",
-  "description": "Mobius flavor lib template project.",
+  "description": "📋 Template for mobius flavor server project.",
   "type": "module",
   "typings": "./typings/main.d.ts",
   "types": "./typings/main.d.ts",
