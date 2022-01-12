@@ -16,7 +16,7 @@
   <a href="./docs/readme_zh.md" style="color: hsla(264, 100%, 50%, 100%);">📜 中文文档</a>
 </p>
 
-<h1 align="center">Lib Name</h1>
+<h1 align="center">Library Name</h1>
 
 🎨 One sentence introduction to the project.
 

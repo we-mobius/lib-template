@@ -6,7 +6,7 @@ export const CSS_CDN_ORIGIN = 'https://fonts.googleapis.cnpmjs.org/'
 const CSP_WHITE_LIST = 'https://*.unpkg.com https://*.jsdelivr.net https://*.cloudflare.com'
 
 const commonTemplate = {
-  title: 'Hello, Mobius Lib!',
+  title: 'Hello, Mobius Library!',
   'meta-csp':
     `default-src 'self' ${CSP_WHITE_LIST};` +
     ` script-src 'self' 'unsafe-inline' 'unsafe-eval' ${CSP_WHITE_LIST};` +
@@ -88,7 +88,7 @@ const commonTemplate = {
               <div class="svg-loading" style="width: 45px; height: 45px;"></div>
             </p>
             <p>
-              Mobius Lib Project!
+              Mobius Library Project!
             </p>
           </div>
         </div>
@@ -108,6 +108,7 @@ const commonTemplate = {
 export const getMobiusConfig = () => ({
   publicPath: PUBLIC_PATH,
   template: {
+    title: 'Index Page',
     index: {
       ...commonTemplate
     }

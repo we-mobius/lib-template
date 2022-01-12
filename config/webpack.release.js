@@ -23,31 +23,33 @@ const reusedConfigs = {
   plugins: [
     ...getReleasePlugins(),
     // CopyPlugin configurations: https://github.com/webpack-contrib/copy-webpack-plugin
-    new CopyPlugin([
-      {
-        from: './src/statics/favicons/',
-        // to 可以写相对 webpack.config.output.path 的路径，比如 './statics/favicons/'
-        // 但 CopyPlugin 插件的文档中没有明确说明 to 最终路径的计算规则
-        // 所以我个人推荐手动计算绝对路径，如下
-        to: path.resolve(PATHS.output, './statics/favicons/'),
-        toType: 'dir'
-      },
-      {
-        from: './src/statics/fonts/',
-        to: path.resolve(PATHS.output, './statics/fonts/'),
-        toType: 'dir'
-      },
-      {
-        from: './src/statics/images/',
-        to: path.resolve(PATHS.output, './statics/images/'),
-        toType: 'dir'
-      },
-      {
-        from: './src/statics/styles/',
-        to: path.resolve(PATHS.output, './statics/styles/'),
-        toType: 'dir'
-      }
-    ])
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './src/statics/favicons/',
+          // to 可以写相对 webpack.config.output.path 的路径，比如 './statics/favicons/'
+          // 但 CopyPlugin 插件的文档中没有明确说明 to 最终路径的计算规则
+          // 所以我个人推荐手动计算绝对路径，如下
+          to: path.resolve(PATHS.output, './statics/favicons/'),
+          toType: 'dir'
+        },
+        {
+          from: './src/statics/fonts/',
+          to: path.resolve(PATHS.output, './statics/fonts/'),
+          toType: 'dir'
+        },
+        {
+          from: './src/statics/images/',
+          to: path.resolve(PATHS.output, './statics/images/'),
+          toType: 'dir'
+        },
+        {
+          from: './src/statics/styles/',
+          to: path.resolve(PATHS.output, './statics/styles/'),
+          toType: 'dir'
+        }
+      ]
+    })
   ],
   devtool: 'hidden-nosources-source-map'
 }
@@ -66,7 +68,7 @@ export const getReleaseConfig = () => ([
       // @refer: https://webpack.js.org/configuration/output/#outputlibrarytype
       // libraryTarget: 'umd',
       library: {
-        name: 'MobiusLib',
+        name: 'MobiusUtils',
         type: 'umd'
       },
       // @refer: https://webpack.js.org/configuration/output/#outputglobalobject
@@ -88,7 +90,6 @@ export const getReleaseConfig = () => ([
       // @refer: https://webpack.js.org/configuration/output/#outputlibrarytype
       // libraryTarget: 'umd',
       library: {
-        name: 'MobiusLib',
         type: 'commonjs2'
       }
     },

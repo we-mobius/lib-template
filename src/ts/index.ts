@@ -1,5 +1,3 @@
-import { esAddOne } from './add'
-export * from './add'
-export const tsAddOne = (n: number): number => esAddOne(n)
+export * from './@types'
 
-console.log(tsAddOne(1) + 2)
+export * from './add'
