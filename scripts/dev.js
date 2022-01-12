@@ -15,7 +15,7 @@ emptyDirSync(rootResolvePath(BUILD_TARGET_DES))
 // ref: https://github.com/webpack/webpack-dev-server/blob/master/examples/api/simple/server.js
 // ref: https://webpack.js.org/configuration/dev-server/
 const webpackConfig = getWebpackConfig({ mode: BUILD_MODE })
-console.info('【webpackConfig】' + JSON.stringify(webpackConfig))
+// console.info('【webpackConfig】' + JSON.stringify(webpackConfig))
 const devServerOptions = {
   headers: { 'Access-Control-Allow-Origin': '*' },
   https: false,
